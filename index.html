@@ -3519,16 +3519,40 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 <script>
-function handleContactForm(e) {
-  e.preventDefault();
-  var form = document.getElementById('contact-form');
-  var name = form.querySelector('[name="contact_name"]').value.trim();
-  var email = form.querySelector('[name="contact_email"]').value.trim();
-  if (!name || !email) return;
-  form.style.display = 'none';
-  document.getElementById('contact-success').style.display = 'block';
-}
+(function() {
+  var SUPABASE_URL = 'https://zqkfrhmuhkgvoknzspju.supabase.co';
+  var SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inpxa2ZyaG11aGtndm9rbnpzcGp1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ0NDA4MzksImV4cCI6MjA5MDAxNjgzOX0.5OYDJCMuMIsje0w9c7skw6pcWiLwPZp2KphfWhMGLzs';
+  var sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
+
+  window.handleContactForm = async function(e) {
+    e.preventDefault();
+    var form = document.getElementById('contact-form');
+    var btn = form.querySelector('button[type="submit"]');
+    btn.disabled = true;
+    btn.querySelector('span').textContent = 'Sending...';
+
+    var payload = {
+      name: form.querySelector('[name="contact_name"]').value.trim(),
+      email: form.querySelector('[name="contact_email"]').value.trim(),
+      phone: form.querySelector('[name="contact_org"]') ? form.querySelector('[name="contact_org"]').value.trim() : '',
+      message: (form.querySelector('[name="contact_service"]') && form.querySelector('[name="contact_service"]').value ? '[' + form.querySelector('[name="contact_service"]').value + '] ' : '') + form.querySelector('[name="contact_message"]').value.trim(),
+      source: 'blasramos.com'
+    };
+
+    try {
+      var res = await sb.from('contact_submissions').insert([payload]);
+      if (res.error) throw res.error;
+      form.style.display = 'none';
+      document.getElementById('contact-success').style.display = 'block';
+    } catch(err) {
+      btn.disabled = false;
+      btn.querySelector('span').textContent = 'Send Message';
+      alert('Something went wrong. Please try again or email directly.');
+    }
+  };
+})();
 </script>
 
 </body>
