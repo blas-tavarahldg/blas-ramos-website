@@ -31,10 +31,10 @@
       a: "OPTIMA PRAXIS is a TAVARA Holdings company. TAVARA Holdings is the parent organization that encompasses OPTIMA PRAXIS, Solomon Teknika, and other ventures under the leadership of Blas Ramos.",
       cat: "about" },
     { q: ["where are you located","location","based","office","philippines","address"],
-      a: "OPTIMA PRAXIS is based in the Philippines and serves clients across APAC and global markets. We work with leaders and organizations wherever real transformation is needed. You can reach us at hello@blasramos.com or +63 968 157 7288.",
+      a: "OPTIMA PRAXIS is based in the Philippines and serves clients across APAC and global markets. We work with leaders and organizations wherever real transformation is needed. You can reach us at care@tavaraholdings.com or +63 968 157 7288.",
       cat: "about" },
     { q: ["contact","email","phone","reach","get in touch","how to contact"],
-      a: "You can reach OPTIMA PRAXIS through several channels:\n\n📧 Email: hello@blasramos.com\n📱 Phone: +63 968 157 7288\n\nOr use the contact form on our website — just scroll to the 'Start the Conversation' section. We'd love to hear about your transformation needs.",
+      a: "You can reach OPTIMA PRAXIS through several channels:\n\n📧 Email: care@tavaraholdings.com\n📱 Phone: +63 968 157 7288\n\nOr use the contact form on our website — just scroll to the 'Start the Conversation' section. We'd love to hear about your transformation needs.",
       cat: "contact" },
 
     // ── SERVICES ──
@@ -103,10 +103,10 @@
 
     // ── PRICING / ENGAGEMENT ──
     { q: ["pricing","cost","how much","fees","rates","investment","price","budget"],
-      a: "Every engagement is custom-designed to match the specific needs, scale, and context of the client. We don't use cookie-cutter packages. The best way to discuss investment is to start a conversation — tell us about your situation, and we'll design an approach that delivers maximum value. Reach out at hello@blasramos.com or use the contact form on our website.",
+      a: "Every engagement is custom-designed to match the specific needs, scale, and context of the client. We don't use cookie-cutter packages. The best way to discuss investment is to start a conversation — tell us about your situation, and we'll design an approach that delivers maximum value. Reach out at care@tavaraholdings.com or use the contact form on our website.",
       cat: "pricing" },
     { q: ["how to start","get started","engage","hire","book","schedule","begin"],
-      a: "Starting is simple — just one honest conversation. Here's how:\n\n1. Use the contact form on our website (scroll to 'Start the Conversation')\n2. Email us at hello@blasramos.com\n3. Call +63 968 157 7288\n\nTell us where you are and where you need to go. We'll take it from there.",
+      a: "Starting is simple — just one honest conversation. Here's how:\n\n1. Use the contact form on our website (scroll to 'Start the Conversation')\n2. Email us at care@tavaraholdings.com\n3. Call +63 968 157 7288\n\nTell us where you are and where you need to go. We'll take it from there.",
       cat: "engagement" },
 
     // ── THOUGHT LEADERSHIP ──
@@ -175,7 +175,7 @@
     if (bestScore >= 2) return bestAnswer.a;
 
     // Fallback
-    return "That's a great question. While I may not have a specific answer for that, I'd encourage you to reach out directly to our team — they can give you the most thorough response.\n\n📧 hello@blasramos.com\n📱 +63 968 157 7288\n\nOr use the contact form on this page. Is there anything else I can help you explore?";
+    return "That's a great question. While I may not have a specific answer for that, I'd encourage you to reach out directly to our team — they can give you the most thorough response.\n\n📧 care@tavaraholdings.com\n📱 +63 968 157 7288\n\nOr use the contact form on this page. Is there anything else I can help you explore?";
   }
 
   // ─── CHATBOT UI ───────────────────────────────────────────────────
