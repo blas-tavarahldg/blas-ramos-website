@@ -1,0 +1,31 @@
+CONVERSION NOTES: blasramosv9Final to WordPress Theme
+=====================================================
+
+Original Source: blasramosv9Final.html (3,522 lines)
+Conversion Date: February 2026
+
+Structure:
+- CSS (lines 14-2114) -> style.css
+- HTML body (lines 2118-3361) -> front-page.php
+- JavaScript (4 script blocks, lines 3362-3519) -> assets/js/main.js
+- Google Fonts -> enqueued via functions.php
+
+Features Preserved:
+- Custom cursor (dot + ring)
+- Animated loader
+- 8-section layout (#home, #about, #track, #opxis, #stories, #topics, #speaking, #connect)
+- Sticky navigation with scroll class
+- Story filtering system (data-category based)
+- Role tag rotation animation
+- Smooth scroll anchors
+- Scroll reveal animations (IntersectionObserver)
+- Contact form validation
+- Mobile hamburger menu
+- All base64 images preserved inline
+
+WordPress Hooks:
+- wp_head() in header.php
+- wp_body_open() in header.php
+- wp_footer() in footer.php
+- wp_enqueue_style() for CSS and Google Fonts
+- wp_enqueue_script() for JS
