@@ -3523,6 +3523,7 @@ document.addEventListener('DOMContentLoaded', function() {
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 <script>
 (function() {
+  var WEB3FORMS_KEY = '64b168c0-ba11-468a-9647-24a41d356cc5';
   var SUPABASE_URL = 'https://zqkfrhmuhkgvoknzspju.supabase.co';
   var SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inpxa2ZyaG11aGtndm9rbnpzcGp1Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzQ0NDA4MzksImV4cCI6MjA5MDAxNjgzOX0.5OYDJCMuMIsje0w9c7skw6pcWiLwPZp2KphfWhMGLzs';
   var sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON);
@@ -3534,23 +3535,53 @@ document.addEventListener('DOMContentLoaded', function() {
     btn.disabled = true;
     btn.querySelector('span').textContent = 'Sending...';
 
-    var payload = {
-      name: form.querySelector('[name="contact_name"]').value.trim(),
-      email: form.querySelector('[name="contact_email"]').value.trim(),
-      phone: form.querySelector('[name="contact_org"]') ? form.querySelector('[name="contact_org"]').value.trim() : '',
-      message: (form.querySelector('[name="contact_service"]') && form.querySelector('[name="contact_service"]').value ? '[' + form.querySelector('[name="contact_service"]').value + '] ' : '') + form.querySelector('[name="contact_message"]').value.trim(),
-      source: 'blasramos.com'
-    };
+    var name = form.querySelector('[name="contact_name"]').value.trim();
+    var email = form.querySelector('[name="contact_email"]').value.trim();
+    var org = form.querySelector('[name="contact_org"]') ? form.querySelector('[name="contact_org"]').value.trim() : '';
+    var service = form.querySelector('[name="contact_service"]') ? form.querySelector('[name="contact_service"]').value : '';
+    var message = form.querySelector('[name="contact_message"]').value.trim();
+    var fullMessage = (service ? '[' + service + '] ' : '') + message;
 
+    // Build subject line with venture prefix
+    var subjectLine = 'BLAS RAMOS: Inquiry from ' + name + (org ? ' (' + org + ')' : '');
+
+    // Send via Web3Forms (primary — delivers email to care@tavaraholdings.com)
+    var emailSent = false;
     try {
-      var res = await sb.from('contact_submissions').insert([payload]);
-      if (res.error) throw res.error;
+      var w3res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          subject: subjectLine,
+          from_name: 'Blas Ramos Website',
+          replyto: email,
+          name: name,
+          email: email,
+          organization: org || 'Not provided',
+          service_interest: service || 'General Inquiry',
+          message: message,
+          source: 'blasramos.com'
+        })
+      });
+      var w3data = await w3res.json();
+      if (w3data.success) emailSent = true;
+    } catch(err) { console.warn('Web3Forms error:', err); }
+
+    // Also save to Supabase (backup data store)
+    try {
+      await sb.from('contact_submissions').insert([{
+        name: name, email: email, phone: org, message: fullMessage, source: 'blasramos.com'
+      }]);
+    } catch(err) { console.warn('Supabase backup error:', err); }
+
+    if (emailSent) {
       form.style.display = 'none';
       document.getElementById('contact-success').style.display = 'block';
-    } catch(err) {
+    } else {
       btn.disabled = false;
       btn.querySelector('span').textContent = 'Send Message';
-      alert('Something went wrong. Please try again or email directly.');
+      document.getElementById('contact-error').style.display = 'block';
     }
   };
 })();
