@@ -3290,6 +3290,9 @@
         <label for="contact_message" style="font-size:0.65rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.35);">Message *</label>
         <textarea id="contact_message" name="contact_message" rows="4" required placeholder="Tell Blas about your transformation goals..." style="padding:0.9rem 1rem;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:#fff;font-family:'DM Sans',sans-serif;font-size:0.9rem;outline:none;resize:vertical;transition:border 0.3s;" onfocus="this.style.borderColor='var(--red)'" onblur="this.style.borderColor='rgba(255,255,255,0.1)'"></textarea>
       </div>
+      <div style="grid-column:span 2; display:flex; justify-content:center; margin-top:0.5rem;">
+        <div class="h-captcha" data-captcha="true" data-sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2" data-theme="dark"></div>
+      </div>
       <div style="grid-column:span 2; text-align:center; margin-top:0.5rem;">
         <button type="submit" class="founding-cta" style="border:none; cursor:pointer;">
           <span>Send Message</span>
@@ -3520,6 +3523,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
+<script src="https://web3forms.com/client/script.js" async defer></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
 <script>
 (function() {
@@ -3545,6 +3549,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Build subject line with venture prefix
     var subjectLine = 'BLAS RAMOS: Inquiry from ' + name + (org ? ' (' + org + ')' : '');
 
+    // Get hCaptcha token
+    var hcaptchaToken = form.querySelector('[name="h-captcha-response"]');
+    var captchaValue = hcaptchaToken ? hcaptchaToken.value : '';
+
     // Send via Web3Forms (primary — delivers email to care@tavaraholdings.com)
     var emailSent = false;
     try {
@@ -3561,7 +3569,8 @@ document.addEventListener('DOMContentLoaded', function() {
           organization: org || 'Not provided',
           service_interest: service || 'General Inquiry',
           message: message,
-          source: 'blasramos.com'
+          source: 'blasramos.com',
+          'h-captcha-response': captchaValue
         })
       });
       var w3data = await w3res.json();
@@ -3578,10 +3587,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if (emailSent) {
       form.style.display = 'none';
       document.getElementById('contact-success').style.display = 'block';
+      if (typeof hcaptcha !== 'undefined') hcaptcha.reset();
     } else {
       btn.disabled = false;
       btn.querySelector('span').textContent = 'Send Message';
       document.getElementById('contact-error').style.display = 'block';
+      if (typeof hcaptcha !== 'undefined') hcaptcha.reset();
     }
   };
 })();
