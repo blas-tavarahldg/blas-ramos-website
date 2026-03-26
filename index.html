@@ -3263,20 +3263,20 @@
 
     <form id="contact-form" method="POST" action="#" style="margin-top:3rem; text-align:left; display:grid; grid-template-columns:1fr 1fr; gap:1.25rem 1.5rem; max-width:680px; margin-left:auto; margin-right:auto;" onsubmit="handleContactForm(event)">
       <div style="display:flex; flex-direction:column; gap:0.4rem;">
-        <label for="contact_name" style="font-size:0.65rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.35);">Name *</label>
-        <input type="text" id="contact_name" name="contact_name" required placeholder="Full Name" style="padding:0.9rem 1rem;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:#fff;font-family:'DM Sans',sans-serif;font-size:0.9rem;outline:none;transition:border 0.3s;" onfocus="this.style.borderColor='var(--red)'" onblur="this.style.borderColor='rgba(255,255,255,0.1)'">
+        <label for="contact_name" style="font-size:0.65rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(11,23,48,0.5);">Name *</label>
+        <input type="text" id="contact_name" name="contact_name" required placeholder="Full Name" style="padding:0.9rem 1rem;background:rgba(255,255,255,0.7);border:1px solid rgba(11,23,48,0.15);color:#0B1730;font-family:'DM Sans',sans-serif;font-size:0.9rem;outline:none;transition:border 0.3s;" onfocus="this.style.borderColor='var(--red)'" onblur="this.style.borderColor='rgba(11,23,48,0.15)'">
       </div>
       <div style="display:flex; flex-direction:column; gap:0.4rem;">
-        <label for="contact_email" style="font-size:0.65rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.35);">Email *</label>
-        <input type="email" id="contact_email" name="contact_email" required placeholder="your@email.com" style="padding:0.9rem 1rem;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:#fff;font-family:'DM Sans',sans-serif;font-size:0.9rem;outline:none;transition:border 0.3s;" onfocus="this.style.borderColor='var(--red)'" onblur="this.style.borderColor='rgba(255,255,255,0.1)'">
+        <label for="contact_email" style="font-size:0.65rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(11,23,48,0.5);">Email *</label>
+        <input type="email" id="contact_email" name="contact_email" required placeholder="your@email.com" style="padding:0.9rem 1rem;background:rgba(255,255,255,0.7);border:1px solid rgba(11,23,48,0.15);color:#0B1730;font-family:'DM Sans',sans-serif;font-size:0.9rem;outline:none;transition:border 0.3s;" onfocus="this.style.borderColor='var(--red)'" onblur="this.style.borderColor='rgba(11,23,48,0.15)'">
       </div>
       <div style="display:flex; flex-direction:column; gap:0.4rem;">
-        <label for="contact_org" style="font-size:0.65rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.35);">Organization</label>
-        <input type="text" id="contact_org" name="contact_org" placeholder="Company / Organization" style="padding:0.9rem 1rem;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:#fff;font-family:'DM Sans',sans-serif;font-size:0.9rem;outline:none;transition:border 0.3s;" onfocus="this.style.borderColor='var(--red)'" onblur="this.style.borderColor='rgba(255,255,255,0.1)'">
+        <label for="contact_org" style="font-size:0.65rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(11,23,48,0.5);">Organization</label>
+        <input type="text" id="contact_org" name="contact_org" placeholder="Company / Organization" style="padding:0.9rem 1rem;background:rgba(255,255,255,0.7);border:1px solid rgba(11,23,48,0.15);color:#0B1730;font-family:'DM Sans',sans-serif;font-size:0.9rem;outline:none;transition:border 0.3s;" onfocus="this.style.borderColor='var(--red)'" onblur="this.style.borderColor='rgba(11,23,48,0.15)'">
       </div>
       <div style="display:flex; flex-direction:column; gap:0.4rem;">
-        <label for="contact_service" style="font-size:0.65rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.35);">Service Interest</label>
-        <select id="contact_service" name="contact_service" style="padding:0.9rem 1rem;background:rgba(11,23,48,0.95);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.7);font-family:'DM Sans',sans-serif;font-size:0.9rem;outline:none;-webkit-appearance:none;appearance:none;">
+        <label for="contact_service" style="font-size:0.65rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(11,23,48,0.5);">Service Interest</label>
+        <select id="contact_service" name="contact_service" style="padding:0.9rem 1rem;background:rgba(11,23,48,0.95);border:1px solid rgba(11,23,48,0.15);color:rgba(255,255,255,0.7);font-family:'DM Sans',sans-serif;font-size:0.9rem;outline:none;-webkit-appearance:none;appearance:none;">
           <option value="">Select a service...</option>
           <option value="Executive Coaching">Executive Coaching</option>
           <option value="Transformation Workshop">Transformation Workshop</option>
@@ -3287,11 +3287,11 @@
         </select>
       </div>
       <div style="display:flex; flex-direction:column; gap:0.4rem; grid-column:span 2;">
-        <label for="contact_message" style="font-size:0.65rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.35);">Message *</label>
-        <textarea id="contact_message" name="contact_message" rows="4" required placeholder="Tell Blas about your transformation goals..." style="padding:0.9rem 1rem;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:#fff;font-family:'DM Sans',sans-serif;font-size:0.9rem;outline:none;resize:vertical;transition:border 0.3s;" onfocus="this.style.borderColor='var(--red)'" onblur="this.style.borderColor='rgba(255,255,255,0.1)'"></textarea>
+        <label for="contact_message" style="font-size:0.65rem;font-weight:700;letter-spacing:0.18em;text-transform:uppercase;color:rgba(11,23,48,0.5);">Message *</label>
+        <textarea id="contact_message" name="contact_message" rows="4" required placeholder="Tell Blas about your transformation goals..." style="padding:0.9rem 1rem;background:rgba(255,255,255,0.7);border:1px solid rgba(11,23,48,0.15);color:#0B1730;font-family:'DM Sans',sans-serif;font-size:0.9rem;outline:none;resize:vertical;transition:border 0.3s;" onfocus="this.style.borderColor='var(--red)'" onblur="this.style.borderColor='rgba(11,23,48,0.15)'"></textarea>
       </div>
       <div style="grid-column:span 2; display:flex; justify-content:center; margin-top:0.5rem;">
-        <div class="h-captcha" data-captcha="true" data-sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2" data-theme="dark"></div>
+        <div class="h-captcha" data-captcha="true" data-sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2" data-theme="light"></div>
       </div>
       <div style="grid-column:span 2; text-align:center; margin-top:0.5rem;">
         <button type="submit" class="founding-cta" style="border:none; cursor:pointer;">
