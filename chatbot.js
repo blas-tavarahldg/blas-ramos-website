@@ -1,12 +1,12 @@
 /**
- * OPTIMA PRAXIS AI Chatbot — Zero-OPEX, Claude-quality responses
- * Runs entirely client-side with pre-generated intelligent knowledge base
+ * BLAS RAMOS Chatbot — Zero-OPEX, intelligent responses
+ * Runs entirely client-side with curated knowledge base
  * (c) 2026 TAVARA Holdings / OPTIMA PRAXIS
  */
 (function() {
   'use strict';
 
-  // ─── KNOWLEDGE BASE (Claude-generated) ────────────────────────────
+  // ─── KNOWLEDGE BASE ───────────────────────────────────────────────
   const SITE = 'blasramos';
   const BOT_NAME = 'BLAS AI';
   const BOT_TAGLINE = 'Blas Ramos — Intelligent Assistant';
