@@ -148,16 +148,16 @@
     <div class="about-visual reveal">
       <div class="about-collage">
         <div class="collage-main">
-          <img loading="lazy" decoding="async" src="images/image_05.webp" alt="Blas Ramos" class="collage-photo" width="800" height="1077" style="object-position: center 20%;">
+          <img decoding="async" src="images/image_05.webp" alt="Blas Ramos" class="collage-photo" width="800" height="1077" style="object-position: center 20%;">
         </div>
         <div class="collage-top">
-          <img loading="lazy" decoding="async" src="images/image_06.webp" alt="Blas Ramos" class="collage-photo" width="768" height="840" style="object-fit:cover; object-position:center 20%;">
+          <img decoding="async" src="images/image_06.webp" alt="Blas Ramos" class="collage-photo" width="768" height="840" style="object-fit:cover; object-position:center 20%;">
         </div>
         <div class="collage-bottom">
-          <img loading="lazy" decoding="async" src="images/image_07.webp" alt="Blas Ramos" class="collage-photo" width="240" height="284" style="object-fit:cover; object-position:center 20%;">
+          <img decoding="async" src="images/image_07.webp" alt="Blas Ramos" class="collage-photo" width="240" height="284" style="object-fit:cover; object-position:center 20%;">
         </div>
         <div class="collage-extra">
-          <img loading="lazy" decoding="async" src="images/image_08.webp" alt="Blas Ramos speaking" class="collage-photo" width="900" height="1100" style="object-fit:cover; object-position:center 25%;">
+          <img decoding="async" src="images/image_08.webp" alt="Blas Ramos speaking" class="collage-photo" width="900" height="1100" style="object-fit:cover; object-position:center 25%;">
         </div>
       </div>
     </div>
@@ -1366,6 +1366,16 @@
     }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
     document.querySelectorAll('.reveal').forEach(function (el) { observer.observe(el); });
+    // Fallback: reveal elements already in viewport that observer may have missed
+    setTimeout(function () {
+      document.querySelectorAll('.reveal:not(.visible)').forEach(function (el) {
+        var rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          el.classList.add('visible');
+          observer.unobserve(el);
+        }
+      });
+    }, 800);
   } else {
     document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('visible'); });
   }
