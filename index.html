@@ -3218,6 +3218,20 @@ function filterDoor(filter, clickedBtn) {
       </div>
     </div>
 
+    <!-- Entry 010 -->
+    <div style="cursor:pointer" onclick="openStory('in-and-out')" class="story-card featured" data-category="personal">
+      <div class="story-card-inner">
+        <div class="diary-meta">
+          <span class="diary-number">Entry 010</span>
+          <span class="diary-date">July 2025</span>
+          <span class="story-card-tag">Personal</span>
+        </div>
+        <h3 class="story-card-title">IN &amp; OUT</h3>
+        <p class="diary-opener">"I thought I'd stay until retirement. The reorg had other plans."</p>
+        <span class="story-card-arrow">→ Continue reading</span>
+      </div>
+    </div>
+
   </div>
   </div>
 
@@ -4390,6 +4404,65 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a) {
     });
   });
 })();
+
+
+<!-- ENTRY 010: IN & OUT -->
+<div class="story-overlay" id="story-in-and-out">
+  <nav class="story-overlay-nav">
+    <button onclick="closeStory()">&larr; Back to Home</button>
+  </nav>
+  <div class="story-overlay-inner">
+    <div class="story-full story-full-text">
+      <div class="story-overlay-header">
+        <div class="story-article-tag">Entry 010 &middot; July 2025 &middot; Personal</div>
+        <h1 class="story-article-title">IN &amp; OUT</h1>
+        <p class="story-article-sub">Twenty years. Company after company. Two to three years each. Always coming in to fix things. Always leaving when the mission was done. I never thought the last door would be different.</p>
+      </div>
+      <div class="story-article-body">
+
+        <p class="story-p">I&rsquo;ve been in the workforce for more than two decades &mdash; twenty years in the corporate world. In and out of different companies over the span of my career life. Two to three years in each organisation I worked for. Always moving. Always building. Always leaving something better than I found it.</p>
+
+        <p class="story-p">Five years was the longest I stayed in one company. That was where I built most of my leadership and management skills. And it was one of the most memorable experiences of my life, for many reasons.</p>
+
+        <p class="story-p">At that time, my bosses opened up opportunities for me at a very young age &mdash; regional IT head, meetings with C-level leaders, driving ideas to completion, exploring untested IT concepts and solutions, being bold in making decisions. It felt like I was always thinking ahead of everyone in the management team. Not young in mindset &mdash; but ahead of the curve.</p>
+
+        <p class="story-p" style="border-left:3px solid rgba(229,34,53,0.5); padding-left:1.25rem; font-style:italic; color:var(--text-mid);">&ldquo;The responsibilities were not for someone with a faint heart. They were for someone strategically strong, results-driven, and seeing things differently.&rdquo;</p>
+
+        <p class="story-p">From that role, I moved from one company to another. The pattern was always the same: come IN, fix things, put systems in place, build the team. Then go OUT when the mission was complete. It wasn&rsquo;t restlessness. It was the nature of what I was built for.</p>
+
+        <p class="story-p">Then came the last company. My sight was different this time. I joined with the intention to stay until retirement. I thought this was the one.</p>
+
+        <p class="story-p">Then the reorg came.</p>
+
+        <p class="story-p">My role was made redundant. I was retrenched.</p>
+
+        <p class="story-p">The news still hadn&rsquo;t sunk in. I could not believe I was being let go. When I joined, I saw myself staying. Now I had to accept that my mission there had come to an end.</p>
+
+        <p class="story-p" style="border-left:3px solid rgba(229,34,53,0.5); padding-left:1.25rem; font-style:italic; color:var(--text-mid);">&ldquo;It&rsquo;s hard to accept the reality of letting go and moving on.&rdquo;</p>
+
+        <p class="story-p">Looking back now, I realised something. My engagement across every company &mdash; always IN and OUT. Coming IN to fix things, put order in place, build high-performing teams. Then leaving OUT when everything was already in order.</p>
+
+        <p class="story-p">Leaving a legacy behind &mdash; not because of me. But because there were people who believed in me. Who bet on me.</p>
+
+        <p class="story-p">That legacy didn&rsquo;t disappear when I was retrenched. It was already planted. In the teams I built. In the systems still running. In the decisions still holding.</p>
+
+        <p class="story-p">The retrenchment wasn&rsquo;t the end of the mission. It was the signal that this one was complete &mdash; and the next one was waiting.</p>
+
+        <p class="story-p">That&rsquo;s how TAVARA Holdings began. Not from a boardroom. Not from a plan. From a reorg notice, an empty desk, and the stubborn belief that the story wasn&rsquo;t over.</p>
+
+        <p class="story-p" style="border-left:3px solid rgba(229,34,53,0.4); padding-left:1.25rem; font-style:italic; color:var(--text-mid); margin-top:2rem;">
+        This is Entry 010 of The Diary &mdash; the raw, unfiltered record of building TAVARA Holdings from broke to builder. If it resonates, share it with someone who needs to hear it.
+        </p>
+
+      </div>
+      <footer class="story-article-footer">
+        <p><strong style="color:#fff;">Blas Ramos</strong></p>
+        <p>Founder, TAVARA Holdings &middot; OPTIMA PRAXIS</p>
+        <p style="margin-top:1rem;"><button onclick="closeStory()" style="color:#E52235;background:none;border:none;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:0.85rem;">Back to Home</button></p>
+      </footer>
+    </div>
+  </div>
+</div>
 
 // Escape key closes story overlay
 document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeStory(); });
