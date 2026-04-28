@@ -132,6 +132,14 @@
     visibility: hidden;
     pointer-events: none;
   }
+
+  /* CSS failsafe — hides loader after 3s even if JS fails */
+  @keyframes forceHide {
+    0%,80% { opacity:1; visibility:visible; }
+    100%   { opacity:0; visibility:hidden; pointer-events:none; }
+  }
+  .loader { animation: forceHide 3s ease forwards; }
+  .loader.done { animation: none; opacity:0; visibility:hidden; pointer-events:none; }
   /* Container — explicit 220×220 so % heights resolve correctly in all browsers */
   .loader-hg {
     position: relative;
@@ -4319,7 +4327,7 @@ function filterDoor(filter, clickedBtn) {
     var r = Math.max(300, 2000 - (Date.now() - _s));
     setTimeout(function() { var el = document.getElementById('loader'); if (el) el.classList.add('done'); }, r);
   });
-  setTimeout(function() { var el = document.getElementById('loader'); if (el && !el.classList.contains('done')) el.classList.add('done'); }, 4000);
+  setTimeout(function() { var el = document.getElementById('loader'); if (el && !el.classList.contains('done')) el.classList.add('done'); }, 1500);
 })();
 
 // Nav scroll effect
