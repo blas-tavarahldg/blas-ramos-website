@@ -3248,7 +3248,9 @@ function filterDoor(filter, clickedBtn) {
     .plat-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem; }
     .plat-card { display:block; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:16px; padding:2rem 1.75rem; text-decoration:none; transition:all 0.35s ease; }
     .plat-card:hover { border-color:rgba(229,34,53,0.5); background:rgba(255,255,255,0.08); transform:translateY(-6px); box-shadow:0 20px 40px rgba(0,0,0,0.3); }
-    .plat-icon { width:48px; height:48px; border-radius:12px; background:rgba(229,34,53,0.15); display:flex; align-items:center; justify-content:center; margin-bottom:1.25rem; }
+    .plat-logo { width:72px; height:72px; background:#fff; border-radius:14px; display:flex; align-items:center; justify-content:center; margin-bottom:1.5rem; padding:10px; box-shadow:0 4px 16px rgba(0,0,0,0.25); overflow:hidden; }
+    .plat-logo img { width:100%; height:100%; object-fit:contain; display:block; }
+    .plat-logo .plat-logo-fallback { width:100%; height:100%; display:flex; align-items:center; justify-content:center; background:rgba(229,34,53,0.1); border-radius:8px; }
     .plat-tag { font-family:'DM Sans',sans-serif; font-size:0.62rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#E52235; margin-bottom:0.5rem; }
     .plat-name { font-family:'Playfair Display',serif; font-size:1.4rem; color:#fff; margin-bottom:0.6rem; line-height:1.2; }
     .plat-desc { font-family:'DM Sans',sans-serif; font-size:0.86rem; color:rgba(255,255,255,0.5); line-height:1.65; margin-bottom:1.25rem; }
@@ -3259,15 +3261,16 @@ function filterDoor(filter, clickedBtn) {
   <div style="max-width:1200px;margin:0 auto;">
     <div class="section-header reveal" style="text-align:center;margin-bottom:3.5rem;">
       <div class="section-tag" style="justify-content:center;color:rgba(255,255,255,0.45);">TAVARA Holdings · Live Products</div>
-      <h2 class="section-title" style="color:#fff;">4 Platforms Built.<br>All Live. All Philippine.</h2>
+      <h2 class="section-title" style="color:#fff;">4 Platforms Built.<br>All Live. All Philippines.</h2>
       <p style="color:rgba(255,255,255,0.5);font-size:1rem;line-height:1.75;max-width:560px;margin:0 auto;font-family:'DM Sans',sans-serif;">Built in 90 days. Running today. Solving real problems for Filipino families, hospitals, communities, and enterprises.</p>
     </div>
     <div class="plat-grid">
 
       <!-- HANAPDOK -->
       <a href="https://hanapdok.com" target="_blank" rel="noopener" class="plat-card reveal reveal-delay-1">
-        <div class="plat-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E52235" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        <div class="plat-logo">
+          <img src="https://logo.clearbit.com/hanapdok.com" alt="HANAPDOK"
+               onerror="this.outerHTML='<div class=\'plat-logo-fallback\'><svg width=\'28\' height=\'28\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'#E52235\' stroke-width=\'2\'><path d=\'M22 12h-4l-3 9L9 3l-3 9H2\'/></svg></div>'">
         </div>
         <div class="plat-tag">Healthcare · AI</div>
         <div class="plat-name">HANAPDOK</div>
@@ -3277,8 +3280,9 @@ function filterDoor(filter, clickedBtn) {
 
       <!-- AIRA -->
       <a href="https://airagov.com" target="_blank" rel="noopener" class="plat-card reveal reveal-delay-2">
-        <div class="plat-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E52235" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div class="plat-logo">
+          <img src="https://logo.clearbit.com/airagov.com" alt="AIRA"
+               onerror="this.outerHTML='<div class=\'plat-logo-fallback\'><svg width=\'28\' height=\'28\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'#E52235\' stroke-width=\'2\'><path d=\'M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\'/></svg></div>'">
         </div>
         <div class="plat-tag">AI Governance · Compliance</div>
         <div class="plat-name">AIRA</div>
@@ -3288,8 +3292,9 @@ function filterDoor(filter, clickedBtn) {
 
       <!-- KOMUNITI -->
       <a href="https://komuniti.cloud" target="_blank" rel="noopener" class="plat-card reveal reveal-delay-3">
-        <div class="plat-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E52235" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><path d="M17 11a3 3 0 1 0 0-6" opacity=".5"/><path d="M23 21v-2a4 4 0 0 0-3-3.87" opacity=".5"/></svg>
+        <div class="plat-logo">
+          <img src="https://logo.clearbit.com/komuniti.cloud" alt="KOMUNITI"
+               onerror="this.outerHTML='<div class=\'plat-logo-fallback\'><svg width=\'28\' height=\'28\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'#E52235\' stroke-width=\'2\'><circle cx=\'9\' cy=\'7\' r=\'4\'/><path d=\'M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2\'/></svg></div>'">
         </div>
         <div class="plat-tag">Community · LGU</div>
         <div class="plat-name">KOMUNITI</div>
@@ -3299,8 +3304,9 @@ function filterDoor(filter, clickedBtn) {
 
       <!-- BLUE WHALE -->
       <a href="https://bluewhaleops.com" target="_blank" rel="noopener" class="plat-card reveal reveal-delay-4">
-        <div class="plat-icon">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E52235" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        <div class="plat-logo">
+          <img src="https://logo.clearbit.com/bluewhaleops.com" alt="BLUE WHALE"
+               onerror="this.outerHTML='<div class=\'plat-logo-fallback\'><svg width=\'28\' height=\'28\' viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'#E52235\' stroke-width=\'2\'><polyline points=\'22 12 18 12 15 21 9 3 6 12 2 12\'/></svg></div>'">
         </div>
         <div class="plat-tag">Operations · AI</div>
         <div class="plat-name">BLUE WHALE</div>
