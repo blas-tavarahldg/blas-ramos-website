@@ -1052,10 +1052,24 @@
   /* Impact numbers strip */
   .impact-strip {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: 3fr 1px 2fr;
     gap: 0;
     background: var(--navy);
     margin-top: 5rem;
+  }
+
+  .impact-group {
+    display: grid;
+    gap: 0;
+  }
+  .impact-group-a { grid-template-columns: repeat(3, 1fr); }
+  .impact-group-b { grid-template-columns: repeat(2, 1fr); }
+
+  .impact-divider {
+    background: rgba(229, 34, 53, 0.35);
+    width: 1px;
+    align-self: stretch;
+    margin: 1.5rem 0;
   }
 
   .impact-item {
@@ -1068,17 +1082,13 @@
   .impact-item:last-child { border-right: none; }
   .impact-item:hover { background: rgba(229, 34, 53, 0.06); }
 
-  .impact-group-break {
-    border-left: 2px solid rgba(229, 34, 53, 0.4) !important;
-    position: relative;
-  }
   .impact-group-label {
     font-family: 'DM Sans', sans-serif;
     font-size: 0.58rem;
     font-weight: 700;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.28);
+    color: rgba(229, 34, 53, 0.65);
     margin-bottom: 0.5rem;
     display: block;
   }
@@ -3031,11 +3041,16 @@ function filterDoor(filter, clickedBtn) {
   </div>
   <!-- IMPACT NUMBERS -->
   <div class="impact-strip">
-    <div class="impact-item reveal"><span class="impact-group-label">What We Built</span><div class="impact-num">4<span class="red"></span></div><div class="impact-label">SaaS Platforms Live</div></div>
-    <div class="impact-item reveal reveal-delay-1"><span class="impact-group-label">What We Built</span><div class="impact-num">15<span class="red">+</span></div><div class="impact-label">Platforms In Development</div></div>
-    <div class="impact-item reveal reveal-delay-2"><span class="impact-group-label">What We Built</span><div class="impact-num">3<span class="red">mo</span></div><div class="impact-label">From Zero to 4 Live Products</div></div>
-    <div class="impact-item impact-group-break reveal reveal-delay-3"><span class="impact-group-label">Career Track Record</span><div class="impact-num">30<span class="red">%</span></div><div class="impact-label">Operational Costs Cut</div></div>
-    <div class="impact-item reveal reveal-delay-4"><span class="impact-group-label">Career Track Record</span><div class="impact-num">95<span class="red">%</span></div><div class="impact-label">SLA Compliance Achieved</div></div>
+    <div class="impact-group impact-group-a">
+      <div class="impact-item reveal"><span class="impact-group-label">What We Built</span><div class="impact-num">4<span class="red"></span></div><div class="impact-label">SaaS Platforms Live</div></div>
+      <div class="impact-item reveal reveal-delay-1"><span class="impact-group-label">What We Built</span><div class="impact-num">15<span class="red">+</span></div><div class="impact-label">Platforms In Development</div></div>
+      <div class="impact-item reveal reveal-delay-2"><span class="impact-group-label">What We Built</span><div class="impact-num">3<span class="red">mo</span></div><div class="impact-label">From Zero to 4 Live Products</div></div>
+    </div>
+    <div class="impact-divider"></div>
+    <div class="impact-group impact-group-b">
+      <div class="impact-item reveal reveal-delay-3"><span class="impact-group-label">Career Track Record</span><div class="impact-num">30<span class="red">%</span></div><div class="impact-label">Operational Costs Cut</div></div>
+      <div class="impact-item reveal reveal-delay-4"><span class="impact-group-label">Career Track Record</span><div class="impact-num">95<span class="red">%</span></div><div class="impact-label">SLA Compliance Achieved</div></div>
+    </div>
   </div>
 </section>
 
