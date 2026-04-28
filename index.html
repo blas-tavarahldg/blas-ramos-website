@@ -1084,7 +1084,7 @@
     font-weight: 600;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.4);
+    color: rgba(255,255,255,0.78);
   }
 
   @media (max-width: 1024px) {
@@ -2712,6 +2712,7 @@ function filterDoor(filter, clickedBtn) {
     <li><a href="#track">Experience</a></li>
     <li><a href="#opxis">OPXIS</a></li>
     <li><a href="#stories">The Diary</a></li>
+    <li><a href="#platforms">Platforms</a></li>
     <li><a href="#topics">Services</a></li>
     <li><a href="#speaking">Speaking</a></li>
     <li><a href="#connect">Connect</a></li>
@@ -2726,8 +2727,9 @@ function filterDoor(filter, clickedBtn) {
   <a href="#about"   onclick="closeMobile()">About</a>
   <a href="#track"   onclick="closeMobile()">Experience</a>
   <a href="#opxis"   onclick="closeMobile()">OPXIS</a>
-  <a href="#stories" onclick="closeMobile()">The Diary</a>
-  <a href="#topics"  onclick="closeMobile()">Services</a>
+  <a href="#stories"   onclick="closeMobile()">The Diary</a>
+  <a href="#platforms" onclick="closeMobile()">Platforms</a>
+  <a href="#topics"    onclick="closeMobile()">Services</a>
   <a href="#speaking" onclick="closeMobile()">Speaking</a>
   <a href="#connect" onclick="closeMobile()">Connect</a>
 </div>
@@ -3073,7 +3075,7 @@ function filterDoor(filter, clickedBtn) {
       <div class="section-tag">The Diary</div>
       <h2 class="section-title">The Diary.</h2>
     </div>
-    <a href="#" class="view-all reveal">
+    <a href="javascript:void(0)" class="view-all reveal" style="pointer-events:none;opacity:0;visibility:hidden;">
       Read All Entries
       <svg width="14" height="14" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
     </a>
@@ -3094,8 +3096,7 @@ function filterDoor(filter, clickedBtn) {
       <div class="story-card-inner">
         <div class="diary-meta">
           <span class="diary-number">Entry 000</span>
-          <span class="diary-date">April 2026</span>
-          <span class="story-card-tag">Video</span>
+                    <span class="story-card-tag">Video</span>
         </div>
         <h3 class="story-card-title">Why I Started This. All of It.</h3>
         <p class="diary-opener">"Fired 3 times. Broke at 50. Still building. This is where it started."</p>
@@ -3108,8 +3109,7 @@ function filterDoor(filter, clickedBtn) {
       <div class="story-card-inner">
         <div class="diary-meta">
           <span class="diary-number">Entry 001</span>
-          <span class="diary-date">March 2018</span>
-          <span class="story-card-tag">Personal</span>
+                    <span class="story-card-tag">Personal</span>
         </div>
         <h3 class="story-card-title">From Pavement to Platform — A Taxi Driver Leads</h3>
         <p class="diary-opener">"The taxi driver didn't know he was being watched. Neither did I."</p>
@@ -3122,8 +3122,7 @@ function filterDoor(filter, clickedBtn) {
       <div class="story-card-inner">
         <div class="diary-meta">
           <span class="diary-number">Entry 002</span>
-          <span class="diary-date">July 2019</span>
-          <span class="story-card-tag">Personal</span>
+                    <span class="story-card-tag">Personal</span>
         </div>
         <h3 class="story-card-title">Lost and Found</h3>
         <p class="diary-opener">"I had a title, a salary, and absolutely no idea who I was."</p>
@@ -3136,8 +3135,7 @@ function filterDoor(filter, clickedBtn) {
       <div class="story-card-inner">
         <div class="diary-meta">
           <span class="diary-number">Entry 003</span>
-          <span class="diary-date">January 2020</span>
-          <span class="story-card-tag">Leadership</span>
+                    <span class="story-card-tag">Leadership</span>
         </div>
         <h3 class="story-card-title">Your Career KIT: Knowledge, Influence, and Trust</h3>
         <p class="diary-opener">"They asked me what made me valuable. I didn't have an answer. Not yet."</p>
@@ -3150,8 +3148,7 @@ function filterDoor(filter, clickedBtn) {
       <div class="story-card-inner">
         <div class="diary-meta">
           <span class="diary-number">Entry 004</span>
-          <span class="diary-date">April 2021</span>
-          <span class="story-card-tag">Leadership</span>
+                    <span class="story-card-tag">Leadership</span>
         </div>
         <h3 class="story-card-title">What I Learned About Creating Immediate Impact</h3>
         <p class="diary-opener">"I had 90 days. The team had 3 years of bad habits."</p>
@@ -3164,8 +3161,7 @@ function filterDoor(filter, clickedBtn) {
       <div class="story-card-inner">
         <div class="diary-meta">
           <span class="diary-number">Entry 005</span>
-          <span class="diary-date">September 2022</span>
-          <span class="story-card-tag">Execution</span>
+                    <span class="story-card-tag">Execution</span>
         </div>
         <h3 class="story-card-title">From 75% to 95% SLA: How I Rebuilt a Broken Service Delivery Machine</h3>
         <p class="diary-opener">"The number was 75. My job was 95. Nobody told me it was impossible."</p>
@@ -3178,8 +3174,7 @@ function filterDoor(filter, clickedBtn) {
       <div class="story-card-inner">
         <div class="diary-meta">
           <span class="diary-number">Entry 006</span>
-          <span class="diary-date">February 2023</span>
-          <span class="story-card-tag">Personal</span>
+                    <span class="story-card-tag">Personal</span>
         </div>
         <h3 class="story-card-title">A Letter to Nanay: The Light That Guided Us Home</h3>
         <p class="diary-opener">"Nanay, you never saw the corner office. But you built everything in it."</p>
@@ -3192,8 +3187,7 @@ function filterDoor(filter, clickedBtn) {
       <div class="story-card-inner">
         <div class="diary-meta">
           <span class="diary-number">Entry 007</span>
-          <span class="diary-date">June 2023</span>
-          <span class="story-card-tag">Leadership</span>
+                    <span class="story-card-tag">Leadership</span>
         </div>
         <h3 class="story-card-title">3 Lessons in Leadership</h3>
         <p class="diary-opener">"Three things I wish someone had told me before I led my first team."</p>
@@ -3206,8 +3200,7 @@ function filterDoor(filter, clickedBtn) {
       <div class="story-card-inner">
         <div class="diary-meta">
           <span class="diary-number">Entry 008</span>
-          <span class="diary-date">October 2023</span>
-          <span class="story-card-tag">The Rises</span>
+                    <span class="story-card-tag">The Rises</span>
         </div>
         <h3 class="story-card-title">Breaking the Barriers</h3>
         <p class="diary-opener">"500 people in the room. Half of them had already decided not to change."</p>
@@ -3220,8 +3213,7 @@ function filterDoor(filter, clickedBtn) {
       <div class="story-card-inner">
         <div class="diary-meta">
           <span class="diary-number">Entry 009</span>
-          <span class="diary-date">March 2024</span>
-          <span class="story-card-tag">Personal</span>
+                    <span class="story-card-tag">Personal</span>
         </div>
         <h3 class="story-card-title">I Was the Case Study Before I Became the Framework</h3>
         <p class="diary-opener">"The framework came after the fall. Not before."</p>
@@ -3234,8 +3226,7 @@ function filterDoor(filter, clickedBtn) {
       <div class="story-card-inner">
         <div class="diary-meta">
           <span class="diary-number">Entry 010</span>
-          <span class="diary-date">July 2025</span>
-          <span class="story-card-tag">Personal</span>
+                    <span class="story-card-tag">Personal</span>
         </div>
         <h3 class="story-card-title">IN &amp; OUT</h3>
         <p class="diary-opener">"I thought I'd stay until retirement. The reorg had other plans."</p>
@@ -3247,6 +3238,78 @@ function filterDoor(filter, clickedBtn) {
   </div>
 
   </div><!-- /.stories-inner -->
+</section>
+
+<!-- SAAS PLATFORMS -->
+<section id="platforms" style="background:linear-gradient(160deg,#0B1730 0%,#162447 100%);padding:7rem 4rem;position:relative;overflow:hidden;">
+  <div style="position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#E52235,transparent 50%,#E52235);"></div>
+  <div style="position:absolute;bottom:0;left:0;right:0;height:1px;background:rgba(255,255,255,0.06);"></div>
+  <style>
+    .plat-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:1.5rem; }
+    .plat-card { display:block; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); border-radius:16px; padding:2rem 1.75rem; text-decoration:none; transition:all 0.35s ease; }
+    .plat-card:hover { border-color:rgba(229,34,53,0.5); background:rgba(255,255,255,0.08); transform:translateY(-6px); box-shadow:0 20px 40px rgba(0,0,0,0.3); }
+    .plat-icon { width:48px; height:48px; border-radius:12px; background:rgba(229,34,53,0.15); display:flex; align-items:center; justify-content:center; margin-bottom:1.25rem; }
+    .plat-tag { font-family:'DM Sans',sans-serif; font-size:0.62rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; color:#E52235; margin-bottom:0.5rem; }
+    .plat-name { font-family:'Playfair Display',serif; font-size:1.4rem; color:#fff; margin-bottom:0.6rem; line-height:1.2; }
+    .plat-desc { font-family:'DM Sans',sans-serif; font-size:0.86rem; color:rgba(255,255,255,0.5); line-height:1.65; margin-bottom:1.25rem; }
+    .plat-url { font-family:'DM Sans',sans-serif; font-size:0.75rem; color:rgba(229,34,53,0.75); font-weight:600; }
+    @media(max-width:900px){.plat-grid{grid-template-columns:repeat(2,1fr);}}
+    @media(max-width:520px){.plat-grid{grid-template-columns:1fr;}}
+  </style>
+  <div style="max-width:1200px;margin:0 auto;">
+    <div class="section-header reveal" style="text-align:center;margin-bottom:3.5rem;">
+      <div class="section-tag" style="justify-content:center;color:rgba(255,255,255,0.45);">TAVARA Holdings · Live Products</div>
+      <h2 class="section-title" style="color:#fff;">4 Platforms Built.<br>All Live. All Philippine.</h2>
+      <p style="color:rgba(255,255,255,0.5);font-size:1rem;line-height:1.75;max-width:560px;margin:0 auto;font-family:'DM Sans',sans-serif;">Built in 90 days. Running today. Solving real problems for Filipino families, hospitals, communities, and enterprises.</p>
+    </div>
+    <div class="plat-grid">
+
+      <!-- HANAPDOK -->
+      <a href="https://hanapdok.com" target="_blank" rel="noopener" class="plat-card reveal reveal-delay-1">
+        <div class="plat-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E52235" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <div class="plat-tag">Healthcare · AI</div>
+        <div class="plat-name">HANAPDOK</div>
+        <p class="plat-desc">Find the right doctor, fast. AI-powered health search built for every Filipino.</p>
+        <div class="plat-url">hanapdok.com →</div>
+      </a>
+
+      <!-- AIRA -->
+      <a href="https://airagov.com" target="_blank" rel="noopener" class="plat-card reveal reveal-delay-2">
+        <div class="plat-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E52235" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <div class="plat-tag">AI Governance · Compliance</div>
+        <div class="plat-name">AIRA</div>
+        <p class="plat-desc">AI readiness across 27 jurisdictions. Board-grade compliance for the AI era.</p>
+        <div class="plat-url">airagov.com →</div>
+      </a>
+
+      <!-- KOMUNITI -->
+      <a href="https://komuniti.cloud" target="_blank" rel="noopener" class="plat-card reveal reveal-delay-3">
+        <div class="plat-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E52235" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="7" r="4"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><path d="M17 11a3 3 0 1 0 0-6" opacity=".5"/><path d="M23 21v-2a4 4 0 0 0-3-3.87" opacity=".5"/></svg>
+        </div>
+        <div class="plat-tag">Community · LGU</div>
+        <div class="plat-name">KOMUNITI</div>
+        <p class="plat-desc">Community platform for LGUs, associations, and organizations across the Philippines.</p>
+        <div class="plat-url">komuniti.cloud →</div>
+      </a>
+
+      <!-- BLUE WHALE -->
+      <a href="https://bluewhaleops.com" target="_blank" rel="noopener" class="plat-card reveal reveal-delay-4">
+        <div class="plat-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E52235" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <div class="plat-tag">Operations · AI</div>
+        <div class="plat-name">BLUE WHALE</div>
+        <p class="plat-desc">AI-powered ops for healthcare and enterprise. Built for scale, compliance, and speed.</p>
+        <div class="plat-url">bluewhaleops.com →</div>
+      </a>
+
+    </div>
+  </div>
 </section>
 
 <!-- TOPICS / SERVICES -->
@@ -4416,6 +4479,7 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a) {
   });
 })();
 
+</script>
 
 <!-- ENTRY 010: IN & OUT -->
 <div class="story-overlay" id="story-in-and-out">
@@ -4476,6 +4540,7 @@ document.querySelectorAll('a[href^="#"]').forEach(function(a) {
   </div>
 </div>
 
+<script>
 // Escape key closes story overlay
 document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeStory(); });
 
